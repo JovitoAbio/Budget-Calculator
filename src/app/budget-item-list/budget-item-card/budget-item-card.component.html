@@ -1,0 +1,15 @@
+
+<div class="root">
+  <div class="budget-item"
+    (click)="onCardClick()"
+    [ngClass]="{ 'income': item.amount >= 0, 'expense': item.amount < 0 }">
+    <div class="discription column auto">
+      <p>{{ item.description }}</p>
+    </div>
+    <div class="column is-one-quarter">
+      <p class="amount has-text-centered is-marginless">{{ item.amount | number }}</p>
+    </div>
+  </div>
+
+  <div class="x-icon-button" (click)="onXButtonClick()"></div>
+</div>
